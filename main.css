@@ -51,8 +51,14 @@ splide__track li img {
     color: transparent;
     background-clip: text;
     transition: 0.3s linear;
-
+    
     &:hover {
         background-size: 100%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 448px) {
+    .spantext {
+        font: 900 2rem Raleway, sans-serif;
     }
 }
