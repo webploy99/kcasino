@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pages/Game</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <section class="bg-[#001d3d]">
+        <div class="header max-w-7xl m-auto p-2 flex justify-between items-center text-[#fefae0] tracking-wide">
+            <div class="logo"><img src="./images/logo.png" class="w-20"></div>
+            <div id="menu" class="fixed top-0 left-0 w-0 md:w-auto h-full bg-gray-600 md:bg-transparent z-50 md:static duration-500 overflow-hidden">
+                <div onclick="hideMenu()" class=" text-3xl p-3 md:hidden flex items-end justify-end"><ion-icon name="close"></ion-icon></div>
+                <ul id="myDIV" class="menus flex flex-col md:flex-row p-10 md:p-0 gap-10 text-sm">
+                    <!-- HOME -->
+                    <li class="btn menu-item group/link overflow-hidden">
+                        <a href="./index.html">HOME</a>
+                        <span class="w-full bg-[#ffeb38] h-[1.5px] block hidden md:block -translate-x-full group-hover/link:translate-x-0 duration-300"></span>
+                    </li>
+                    <!-- PAGE -->
+                    <li class="btn active menu-item group/link overflow-hidden">
+                        <a href="./game.html">GAME</a>
+                        <span class="w-full bg-[#ffeb38] h-[1.5px] block hidden md:block -translate-x-full group-hover/link:translate-x-0 duration-300"></span>
+                    </li>
+                    <!-- BLOG -->
+                    <li class="btn menu-item group/link overflow-hidden">
+                        <a href="./blog.html">BLOG</a>
+                        <span class="w-full bg-[#ffeb38] h-[1.5px] block hidden md:block -translate-x-full group-hover/link:translate-x-0 duration-300"></span>
+                    </li>
+                    <!-- STORE -->
+                    <li class="btn menu-item group/link overflow-hidden">
+                        <a href="#">STORE</a>
+                        <span class="w-full bg-[#ffeb38] h-[1.5px] block hidden md:block -translate-x-full group-hover/link:translate-x-0 duration-300"></span>
+                    </li>
+                    <!-- CONTACT -->
+                    <li class="btn menu-item group/link overflow-hidden">
+                        <a href="#" class="text-dark py-1.5">CONTACT</a>
+                        <span class="w-full bg-[#ffeb38] h-[1.5px] block hidden md:block -translate-x-full group-hover/link:translate-x-0 duration-300"></span>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="flex gap-5">
+                <div class="login hidden md:block font-semibold text-sm px-5 py-1.5 shadow shadow-gray-200/100 rounded">LOGIN</div>
+            </div>
+    
+            <div onclick="showMenu()" class="md:hidden text-3xl"><ion-icon name="menu"></ion-icon></div>
+        </div>
+    </section>
+
+    <!-- main -->
+    <section>
+        <div class="">
+            <div class="relative">
+                <img src="./images/page-banner.jpg" class="w-full">
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <span class="spantext tracking-wider">game</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ONLINE CASINO -->
+        <section class="max-w-7xl m-auto px-5 py-10">
+            <span class="text-yellow-500 font-semibold block text-center mt-10">ONLINE CASINO</span>
+            <span class="text-gray-100 text-5xl font-bold block text-center mt-5">Experience the joy</span>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
+                <div class="flex justify-center items-center">
+                    <div class="card bg-stone-800 shadow-lg flex flex-col justify-center text-gray-100 cursor-pointer overflow-hidden group/card">
+                        <div class="content duration-500">
+                            <div class="imgBx relative overflow-hidden bg-center object-cover">
+                                <img src="./images/page-img1.jpg" class="group-hover/card:scale-110 duration-500">
+                            </div>
+                            <div class="mt-5 flex flex-col gap-3 justify-center items-center px-3">
+                                <span class="text-2xl font-bold text-center block">Premium offers</span>
+                                <p class="block text-center">Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernaturaut odit aut fugit, sed quia.</p>
+                            </div>
+                        </div>
+    
+                        <div class="flex justify-center items-center gap-2.5  py-8 px-3">
+                            <div class="flex gap-5 -translate-x-12 opacity-0 group-hover/card:opacity-100 group-hover/card:translate-x-0 duration-500">
+                                <span class="font-semibold">PLAY NOW!</span>
+                            </div>
+                            <span class="text-5xl text-gray-500 group-hover/card:text-yellow-500 -translate-x-12 group-hover/card:opacity-100 group-hover/card:translate-x-0 duration-500"><ion-icon name="arrow-forward-circle"></ion-icon></span>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <div class="flex justify-center items-center">
+                    <div class="card bg-stone-800 shadow-lg flex flex-col justify-center text-gray-100 cursor-pointer overflow-hidden group/card">
+                        <div class="content duration-500">
+                            <div class="imgBx relative overflow-hidden bg-center object-cover">
+                                <img src="./images/page-img2.jpg" class="group-hover/card:scale-110 duration-500">
+                            </div>
+                            <div class="mt-5 flex flex-col gap-3 justify-center items-center px-3">
+                                <span class="text-2xl font-bold text-center block">Premium offers</span>
+                                <p class="block text-center">Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernaturaut odit aut fugit, sed quia.</p>
+                            </div>
+                        </div>
+    
+                        <div class="flex justify-center items-center gap-2.5  py-8 px-3">
+                            <div class="flex gap-5 -translate-x-12 opacity-0 group-hover/card:opacity-100 group-hover/card:translate-x-0 duration-500">
+                                <span class="font-semibold">PLAY NOW!</span>
+                            </div>
+                            <span class="text-5xl text-gray-500 group-hover/card:text-yellow-500 -translate-x-12 group-hover/card:opacity-100 group-hover/card:translate-x-0 duration-500"><ion-icon name="arrow-forward-circle"></ion-icon></span>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <div class="flex justify-center items-center">
+                    <div class="card bg-stone-800 shadow-lg flex flex-col justify-center text-gray-100 cursor-pointer overflow-hidden group/card">
+                        <div class="content duration-500">
+                            <div class="imgBx relative overflow-hidden bg-center object-cover">
+                                <img src="./images/page-img3.jpg" class="group-hover/card:scale-110 duration-500">
+                            </div>
+                            <div class="mt-5 flex flex-col gap-3 justify-center items-center px-3">
+                                <span class="text-2xl font-bold text-center block">Premium offers</span>
+                                <p class="block text-center">Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernaturaut odit aut fugit, sed quia.</p>
+                            </div>
+                        </div>
+    
+                        <div class="flex justify-center items-center gap-2.5  py-8 px-3">
+                            <div class="flex gap-5 -translate-x-12 opacity-0 group-hover/card:opacity-100 group-hover/card:translate-x-0 duration-500">
+                                <span class="font-semibold">PLAY NOW!</span>
+                            </div>
+                            <span class="text-5xl text-gray-500 group-hover/card:text-yellow-500 -translate-x-12 group-hover/card:opacity-100 group-hover/card:translate-x-0 duration-500"><ion-icon name="arrow-forward-circle"></ion-icon></span>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <div class="flex justify-center items-center">
+                    <div class="card bg-stone-800 shadow-lg flex flex-col justify-center text-gray-100 cursor-pointer overflow-hidden group/card">
+                        <div class="content duration-500">
+                            <div class="imgBx relative overflow-hidden bg-center object-cover">
+                                <img src="./images/page-img4.jpg" class="group-hover/card:scale-110 duration-500">
+                            </div>
+                            <div class="mt-5 flex flex-col gap-3 justify-center items-center px-3">
+                                <span class="text-2xl font-bold text-center block">Premium offers</span>
+                                <p class="block text-center">Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernaturaut odit aut fugit, sed quia.</p>
+                            </div>
+                        </div>
+    
+                        <div class="flex justify-center items-center gap-2.5  py-8 px-3">
+                            <div class="flex gap-5 -translate-x-12 opacity-0 group-hover/card:opacity-100 group-hover/card:translate-x-0 duration-500">
+                                <span class="font-semibold">PLAY NOW!</span>
+                            </div>
+                            <span class="text-5xl text-gray-500 group-hover/card:text-yellow-500 -translate-x-12 group-hover/card:opacity-100 group-hover/card:translate-x-0 duration-500"><ion-icon name="arrow-forward-circle"></ion-icon></span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- CREATIVE APPROACH -->
+        <section>
+            <div class="mt-10">
+                <div class="grid sm:grid-cols-2 content-items-center place-items-center gap-5 px-5">
+                    <div class="flex gap-5 flex-col justify-center items-center">
+                        <img src="./images/page-banner2.png" class="lg:w-10/12">
+                        <img src="./images/playnow.png" class="w-2/4 lg:w-1/4 transform hover:scale-105 duration-500 cursor-pointer">
+                    </div>
+                    <div class="mt-8 sm:mt-0">
+                        <div class="xl:w-7/12 flex flex-col gap-3 text-gray-100">
+                            <span class="text-yellow-500 text-sm font-semibold tracking-wider">CREATIVE APPROACH</span>
+                            <span class="text-3xl lg:text-4xl xl:text-5xl font-bold">We develop & create</span>
+                            <span class="text-3xl lg:text-4xl xl:text-5xl font-bold">online games</span>
+                            <p class="mt-8 font-light text-gray-400">Adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna aliqua. Ut enim ad minim veniam natus error sit
+                            voluptatem accusantium doloremque laundatium.</p>
+                            <p class="font-light text-gray-400">Natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                            <div class="mt-8">
+                                <button class="px-10 py-4 bg-gray-900 text-sm tracking-wider font-semibold border border-gray-300 shadow-lg hover:border-yellow-400/50 hover:text-yellow-500 hover:bg-gray-950 duration-500">READ MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- welcome -->
+        <section>
+            <div class="py-10">
+                <div class="max-w-7xl m-auto flex flex-col items-center gap-5 p-5 text-white">
+                    <span class="text-yellow-500 text-sm font-semibold">WELCOME</span>
+                    <span class="text-3xl text-3xl sm:text-5xl font-bold">Try our new games</span>
+                    <div class="mt-10">
+                        <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 *:w-80 *:sm:w-72 *:md:w-80 *:lg:w-64 *:xl:w-72 *:h-[430px] font-bold">
+                            <!-- 1 -->
+                            <div class="relative flex justify-between group/card duration-500 cursor-pointer overflow-hidden" style="background-image: url(./images/page-bg-red.jpg)">
+                                <div class="mt-14 z-10 w-full h-0"><img src="./images/page-icon1.png" class="group-hover/card:scale-105 duration-500"></div>
+                                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-indigo-900 via-yellow-300 to-pink-900 opacity-50"></div>
+                                <div class="absolute top-0 left-0 w-full h-full p-5 flex flex-col justify-between items-center  opacity-60 bg-gradient-to-b hover:from-indigo-800 hover:via-yellow-800 hover:to-pink-800 z-10">
+                                    <span class="-translate-y-full group-hover/card:-translate-y-2 opacity-0 group-hover/card:opacity-100 duration-500 text-xl">01.</span>
+                                    <div>
+                                        <span class="block translate-y-3 group-hover/card:-translate-y-5 duration-500 text-2xl">SLOT</span>
+                                        <span class="block font-normal translate-y-5 group-hover/card:-translate-y-5 opacity-0 group-hover/card:opacity-100 duration-500">New Game</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2 -->
+                            <div class="relative flex justify-between group/card duration-500 cursor-pointer overflow-hidden" style="background-image: url(./images/page-bg-blue.jpg)">
+                                <div class="mt-14 z-10 w-full h-0"><img src="./images/page-icon2.png" class="w-80 group-hover/card:scale-105 duration-500"></div>
+                                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-indigo-900 via-yellow-300 to-pink-900 opacity-50"></div>
+                                <div class="absolute top-0 left-0 w-full h-full p-5 flex flex-col justify-between items-center text-gray-100  opacity-60 bg-gradient-to-b hover:from-indigo-800 hover:via-yellow-800 hover:to-pink-800 z-10 z-10">
+                                    <span class="-translate-y-full group-hover/card:-translate-y-2 opacity-0 group-hover/card:opacity-100 duration-500 text-xl">02.</span>
+                                    <div>
+                                        <span class="block translate-y-3 group-hover/card:-translate-y-5 duration-500 text-2xl">CARD</span>
+                                        <span class="block font-normal translate-y-5 group-hover/card:-translate-y-5 opacity-0 group-hover/card:opacity-100 duration-500">New Game</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="relative flex justify-between group/card duration-500 cursor-pointer overflow-hidden" style="background-image: url(./images/page-bg-green.jpg)">
+                                <div class="mt-14 z-10 w-full h-0"><img src="./images/page-icon3.png" class="w-80 group-hover/card:scale-105 duration-500"></div>
+                                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-indigo-900 via-yellow-300 to-pink-900 opacity-50"></div>
+                                <div class="absolute top-0 left-0 w-full h-full p-5 flex flex-col justify-between items-center text-gray-100  opacity-60 bg-gradient-to-b hover:from-indigo-800 hover:via-yellow-800 hover:to-pink-800 z-10 z-10">
+                                    <span class="-translate-y-full group-hover/card:-translate-y-2 opacity-0 group-hover/card:opacity-100 duration-500 text-xl">03.</span>
+                                    <div>
+                                        <span class="block translate-y-3 group-hover/card:-translate-y-5 duration-500 text-2xl">DICE</span>
+                                        <span class="block font-normal translate-y-5 group-hover/card:-translate-y-5 opacity-0 group-hover/card:opacity-100 duration-500">New Game</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 4 -->
+                            <div class="relative flex justify-between group/card duration-500 cursor-pointer overflow-hidden" style="background-image: url(./images/page-bg-indigo.jpg)">
+                                <div class="mt-14 z-10 w-full h-0"><img src="./images/page-icon4.png" class="w-80 group-hover/card:scale-105 duration-500"></div>
+                                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-indigo-900 via-yellow-300 to-pink-900 opacity-50"></div>
+                                <div class="absolute top-0 left-0 w-full h-full p-5 flex flex-col justify-between items-center text-gray-100  opacity-60 bg-gradient-to-b hover:from-indigo-800 hover:via-yellow-800 hover:to-pink-800 z-10 z-10">
+                                    <span class="-translate-y-full group-hover/card:-translate-y-2 opacity-0 group-hover/card:opacity-100 duration-500 text-xl">04.</span>
+                                    <div>
+                                        <span class="block translate-y-3 group-hover/card:-translate-y-5 duration-500 text-2xl">ROULETTE</span>
+                                        <span class="block font-normal translate-y-5 group-hover/card:-translate-y-5 opacity-0 group-hover/card:opacity-100 duration-500">New Game</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AWESOME GAMES -->
+        <section>
+            <div class="text-white mt-20">
+                <div class="bg-cover bg-center w-full h-[500px] flex items-center"
+                    style="background-image: url(./images/page-banner3.jpg)">
+                    <div class="max-w-7xl m-auto grow flex flex-col px-5">
+                        <span class="text-yellow-500 font-semibold">AWESOME GAMES</span>
+                        <span class="text-4xl md:text-5xl font-bold mt-8">Have fun and win big at</span>
+                        <span class="text-4xl md:text-5xl font-bold">our online casino!</span>
+                        <div class="mt-8">
+                            <button class="px-14 py-4 text-sm font-semibold border bg-yellow-600 hover:bg-gray-800 hover:border-yellow-500 duration-500 tracking-wider">BONUSES</button>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engjoy to day -->
+        <section>
+            <div class="max-w-7xl m-auto py-20 px-5">
+                <div class="flex flex-col gap-5 text-gray-100">
+                    <span class="text-sm font-semibold text-yellow-500 tracking-wider">ENJOY TODAY</span>
+                    <span class="text-4xl sm:text-5xl font-bold">Top slot games</span>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-5 mt-5">
+                        <!-- 1 -->
+                        <div class="py-5 flex flex-col gap-5">
+                            <span class="text-2xl font-bold">The big bang</span>
+                            <p class="font-light">Adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna aliqua. Ut enim ad minim veniam,quis nostrud.</p>
+                            <div class="relative flex flex-col p-3 gap-5 group/box overflow-hidden">
+                                <div class="absolute top-0 left-0 opacity-80 group-hover/box:opacity-70"><img src="./images/page-bg-icon6.jpg"></div>
+                                <div class="text-normal font-semibold flex gap-2 items-center">
+                                    <span class="-translate-x-full group-hover/box:translate-x-0 opacity-0 group-hover/box:opacity-100 duration-500">Read More</span>
+                                    <ion-icon class="text-3xl text-gray-400 -translate-x-24 group-hover/box:translate-x-0 duration-500" name="arrow-forward"></ion-icon>
+                                </div>
+                                <div class="mt-5 flex items-center justify-center cursor-pointer z-10">
+                                    <img src="./images/page-icon10.png" class="group-hover/box:scale-105 duration-500">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="py-5 flex flex-col gap-5">
+                            <span class="text-2xl font-bold">Poker</span>
+                            <p class="font-light">Adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna aliqua. Ut enim ad minim veniam,quis nostrud.</p>
+                            <div class="relative flex flex-col p-3 gap-5 group/box overflow-hidden">
+                                <div class="absolute top-0 left-0 opacity-80 group-hover/box:opacity-70"><img src="./images/page-bg-icon3.jpg"></div>
+                                <div class="text-normal font-semibold flex gap-2 items-center">
+                                    <span class="-translate-x-full group-hover/box:translate-x-0 opacity-0 group-hover/box:opacity-100 duration-500">Read More</span>
+                                    <ion-icon class="text-3xl text-gray-400 -translate-x-24 group-hover/box:translate-x-0 duration-500" name="arrow-forward"></ion-icon>
+                                </div>
+                                <div class="mt-5 flex items-center justify-center cursor-pointer z-10">
+                                    <img src="./images/page-icon11.png" class="group-hover/box:scale-105 duration-500">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="py-5 flex flex-col gap-5">
+                            <span class="text-2xl font-bold">Bacarat</span>
+                            <p class="font-light">Adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna aliqua. Ut enim ad minim veniam,quis nostrud.</p>
+                            <div class="relative flex flex-col p-3 gap-5 group/box overflow-hidden">
+                                <div class="absolute top-0 left-0 opacity-80 group-hover/box:opacity-70"><img src="./images/page-bg-icon4.jpg"></div>
+                                <div class="text-normal font-semibold flex gap-2 items-center">
+                                    <span class="-translate-x-full group-hover/box:translate-x-0 opacity-0 group-hover/box:opacity-100 duration-500">Read More</span>
+                                    <ion-icon class="text-3xl text-gray-400 -translate-x-24 group-hover/box:translate-x-0 duration-500" name="arrow-forward"></ion-icon>
+                                </div>
+                                <div class="mt-5 flex items-center justify-center cursor-pointer z-10">
+                                    <img src="./images/page-icon12.png" class="group-hover/box:scale-105 duration-500">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="py-5 flex flex-col gap-5">
+                            <span class="text-2xl font-bold">Coin</span>
+                            <p class="font-light">Adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna aliqua. Ut enim ad minim veniam,quis nostrud.</p>
+                            <div class="relative flex flex-col p-3 gap-5 group/box overflow-hidden">
+                                <div class="absolute top-0 left-0 opacity-80 group-hover/box:opacity-70"><img src="./images/page-bg-icon5.jpg"></div>
+                                <div class="text-normal font-semibold flex gap-2 items-center">
+                                    <span class="-translate-x-full group-hover/box:translate-x-0 opacity-0 group-hover/box:opacity-100 duration-500">Read More</span>
+                                    <ion-icon class="text-3xl text-gray-400 -translate-x-24 group-hover/box:translate-x-0 duration-500" name="arrow-forward"></ion-icon>
+                                </div>
+                                <div class="mt-5 flex items-center justify-center cursor-pointer z-10">
+                                    <img src="./images/page-icon13.png" class="group-hover/box:scale-105 duration-500">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- casino night -->
+        <section>
+            <div class="">
+                <span class="text-2xl font-bold tracking-wider text-yellow-200 block text-center">CASINO NIGHT</span>
+                <div class="mt-10"><img src="./images/casino-night.jpg" class="w-full"></div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <section>
+            <div class="max-w-7xl m-auto py-20">
+                <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-5 text-gray-100 font-light p-5">
+                    <div class="">
+                        <div class="flex flex-col gap-3">
+                            <span class="text-lg font-bold">Working hours</span>
+                            <span class="mt-5">Mon-Fri: 9 AM – 6 PM</span>
+                            <span>Saturday: 9 AM – 4 PM</span>
+                            <span>Sunday: Closed</span>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="flex flex-col gap-1">
+                            <span class="text-lg font-bold">Office</span>
+                            <span class="mt-5">Germany —</span>
+                            <span>785 15h Street, Office 478</span>
+                            <span>Berlin, De 81566</span>
+                            <div class="relative flex flex-col group/link cursor-pointer overflow-hidden">
+                                <span class="mt-5">info@email.com</span>
+                                <span class="absolute bottom-0 left-0 w-[133px] h-[1px] bg-yellow-100 -translate-x-full group-hover/link:translate-x-0 duration-300"></span>
+                            </div>
+                            <span class="mt-5 text-lg font-semibold">+1 800 627 28 28</span>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="flex flex-col gap-3">
+                            <span class="text-lg font-bold">Links</span>
+                            <span class="mt-5">Home</span>
+                            <span>Bonuses</span>
+                            <span>About Us</span>
+                            <span>Shop</span>
+                            <span>Contacts</span>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="flex flex-col gap-3">
+                            <span class="text-lg font-bold">Get in touch</span>
+                            <div class="flex gap-3 text-xl mt-5 *:p-2 *:border *:rounded-full *:duration-500 *:cursor-pointer">
+                                <ion-icon class="hover:text-yellow-500" name="logo-facebook"></ion-icon>
+                                <ion-icon class="hover:text-yellow-500" name="logo-twitter"></ion-icon>
+                                <ion-icon class="hover:text-yellow-500" name="logo-dribbble"></ion-icon>
+                                <ion-icon class="hover:text-yellow-500" name="logo-instagram"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="flex justify-center items-center p-40  text-gray-800">
+                <div class="group/menu relative cursor-pointer border">
+                    <span class="p-3 text-sm font-bold block text-gray-200">DROPDOWN</span>
+                    <div class="absolute mt-20 flex flex-col gap-3 bg-gray-200 hidden text-yellow-600 block p-5 transition-all group-hover/menu:block flex group-hover/menu:flex opacity-0 group-hover/menu:opacity-100 group-hover/menu:-translate-y-20 duration-500">
+                        <a href="#">Home</a>
+                        <a href="#">about</a>
+                        <a href="#">contact</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>

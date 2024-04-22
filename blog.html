@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CasiPoker</title>
+    <link rel="stylesheet" href="./main.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- splidejs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <!-- increse number  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+        integrity="sha512-egJ/Y+22P9NQ9aIyVCh0VCOsfydyn8eNmqBy+y2CnJG+fpRIxXMS6jbWP8tVKp0jp+NO5n8WtMUAnNnGoJKi4w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/1.1.6/waypoints.min.js"
+        integrity="sha512-DESGNPkaQ4F8kcaGRbZfvaTvH70hSJYFBKaQOPcQWOSGbNjjb/smWx1wNlyzO8yIinYWyb11nCs43MTxrjwoZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body">
+    <!-- header -->
+    <section class="bg-[#001d3d]">
+        <div class="header max-w-7xl m-auto p-2 flex justify-between items-center text-[#fefae0] tracking-wide">
+            <div class="logo"><img src="./images/logo.png" class="w-20"></div>
+            <div id="menu"
+                class="fixed top-0 left-0 w-0 md:w-auto h-full bg-gray-600 md:bg-transparent z-50 md:static duration-500 overflow-hidden">
+                <div onclick="hideMenu()" class=" text-3xl p-3 md:hidden flex items-end justify-end"><ion-icon
+                        name="close"></ion-icon></div>
+                <ul id="myDIV" class="menus relative flex flex-col p-10 md:p-0 gap-10 md:flex-row text-sm">
+                    <!-- HOME -->
+                    <li class="btn menu-item group/link overflow-hidden">
+                        <a href="./index.html">HOME</a>
+                        <span class="w-full bg-[#ffeb38] h-[1.5px] block hidden md:block -translate-x-full group-hover/link:translate-x-0 duration-300"></span>
+                    </li>
+                    <!-- PAGE -->
+                    <li class="btn menu-item group/link overflow-hidden">
+                        <a href="./game.html">GAME</a>
+                        <span class="w-full bg-[#ffeb38] h-[1.5px] block hidden md:block -translate-x-full group-hover/link:translate-x-0 duration-300"></span>
+                    </li>
+                    <!-- BLOG -->
+                    <li class="btn active menu-item group/link overflow-hidden">
+                        <a href="./blog.html">BLOG</a>
+                        <span class="w-full bg-[#ffeb38] h-[1.5px] block hidden md:block -translate-x-full group-hover/link:translate-x-0 duration-300"></span>
+                    </li>
+                    <!-- STORE -->
+                    <li class="btn menu-item group/link overflow-hidden">
+                        <a href="#">STORE</a>
+                        <span class="w-full bg-[#ffeb38] h-[1.5px] block hidden md:block -translate-x-full group-hover/link:translate-x-0 duration-300"></span>
+                    </li>
+                    <!-- CONTACT -->
+                    <li class="btn menu-item group/link overflow-hidden">
+                        <a href="#" class="text-dark py-1.5">CONTACT</a>
+                        <span class="w-full bg-[#ffeb38] h-[1.5px] block hidden md:block -translate-x-full group-hover/link:translate-x-0 duration-300"></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex gap-5">
+                <div class="login hidden md:block font-semibold text-sm px-5 py-1.5 shadow shadow-gray-200/100 rounded">
+                    LOGIN</div>
+            </div>
+
+            <div onclick="showMenu()" class="md:hidden text-3xl"><ion-icon name="menu"></ion-icon></div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section>
+        <div class="text-white">
+            <div class="max-w-7xl m-auto tracking-wider">
+                <div class="grid sm:grid-cols-3 gap-10 mt-20">
+                    <div class="">
+                        <span class="text-4xl font-bold">We develop & create
+                            online games</span>
+                    </div>
+                    <div class="flex gap-3 flex-col font-light">
+                        <span class="font-bold">Address</span>
+                        <span>Germany —</span>
+                        <span>785 15h Street, Office 478</span>
+                        <span>Berlin, De 81566</span>
+                    </div>
+                    <div class="flex gap-3 flex-col font-light">
+                        <span class="font-bold">Say Hello</span>
+                        <a href="#" class="hover:text-yellow-600 duration-500 underline">info@email.com</a>
+                        <a href="#" class="hover:text-yellow-600 duration-500">+1 840 555 25 65</a>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-600 mt-10">
+                    <span class="text-gray-500 block text-center py-8">Casino © 2024. All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+        'use strict'
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide = new Splide('.splide', {
+                perPage: 3,
+                gap: '20px',
+                type: 'loop',
+                autoplay: true,
+                interval: 2000,
+                snap: true,
+                breakpoints: {
+                    768: {
+                        perPage: 2
+                    },
+                    448: {
+                        perPage: 1
+                    }
+                }
+                // start: 2,
+                // pagination: false,
+            });
+            splide.mount();
+        });
+
+        $('#1').waypoint(function () {
+            increment(1, 88);
+        }, { offset: '88%' });
+
+        $('#2').waypoint(function () {
+            increment(2, 68);
+        }, { offset: '88%' });
+
+        $('#3').waypoint(function () {
+            increment(3, 58);
+        }, { offset: '88%' });
+
+        $('#4').waypoint(function () {
+            increment(4, 78);
+        }, { offset: '88%' });
+
+        function increment(elem, finalVal) {
+            var currVal = parseInt(document.getElementById(elem).innerHTML, 10);
+            if (currVal < finalVal) {
+                currVal++;
+                document.getElementById(elem).innerHTML = currVal;
+
+                setTimeout(function () {
+                    increment(elem, finalVal);
+                }, 28)
+            }
+        };
+
+    </script>
+    <script src="./script.js"></script>
+
+</body>
+</html>
